@@ -4,7 +4,7 @@ pipeline {
     environment {
         DOCKER_OWNER = 'matio89'
         DOCKER_USER = 'matio89'
-        DOCKER_TOKEN = credentials('dockerhub-firas-token')
+        DOCKER_TOKEN = credentials('dockerhub-anis-token')
         FRONT_IMG_TAG = sh( returnStdout:true,
                     script: 'sha256sum angular-app/package.json | cut -c1-15'
                   ).trim()
